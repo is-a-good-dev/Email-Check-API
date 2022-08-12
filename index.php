@@ -1,6 +1,6 @@
 <?php 
 header('Content-type: application/json');
-function json_response($status,$message,&$data=null){
+function response($status,$message,&$data=null){
     header("HTTP/1.1 ".$status);
     $response['status'] = $status;
     $response['message'] = $message;
@@ -10,6 +10,6 @@ function json_response($status,$message,&$data=null){
 error_reporting(0); 
 if ($_SERVER['REQUEST_METHOD']=='GET'){
     $key = $_GET['key'];
-    if (empty(trim($key))) json_response(400, 'API key cannot be empty');
+    if (empty(trim($key))) response(400, 'API key cannot be empty');
 
 }
