@@ -1,4 +1,6 @@
 <?php 
+require 'vendor/autoload.php';
+use ElliotJReed\DisposableEmail\DisposableEmail;
 header('Content-type: application/json');
 function response($status,$message,&$data=null){
     header("HTTP/1.1 ".$status);
@@ -25,11 +27,16 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     }
     $data = [];
     $data['email'] = $email;
-    if (filter_var($email, FILTER_VALIDATE_EMAIL)) $data['valid_format'] = true;
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) $data['domain_data']['valid_format'] = true;
     else {
-        $data['valid_format'] = false;
-        $data['result'] = 'invalid format';
+        $data['domain_data']['valid_format'] = false;
+        $data['domain_data']['result'] = 'invalid format';
     }
+    if (DisposableEmail::isDisposable($email)) {
+        $data['domain_data']['disposable_email'] = true;
+    } 
+    $data['domain_data']['disposable_email'] = false;
+
     
     response(200, 'OK', $data);
 }
