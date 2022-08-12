@@ -19,7 +19,6 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     if ($_GET['action'] == 'testres'){
         $data = [];
         $data['email'] = 'johndoe@example.com';
-        $data['valid_domain'] = true;
         $data['domain'] = 'example.com';
         $data['domain_data']['valid_format'] = true;
         $data['domain_data']['mx_records'] = true;
