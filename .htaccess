@@ -1,1 +1,1 @@
-ErrorDocument 500 500.php
+ErrorDocument 500 ./500.php
