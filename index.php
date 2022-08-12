@@ -18,6 +18,11 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
         response(400, 'Incorrect credentials');
         exit();
     }
-    //$email = $_GET['email'];
-    response(200,"ok");
+    $email = $_GET['email'];
+    if (empty(trim($email))){
+        response(400, 'Email cannot be empty');
+        exit();
+    }
+    //$email_checks['mx-records'] = getmxrr($email);
+//    response(200,"ok");
 }
