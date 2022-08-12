@@ -29,14 +29,9 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     $data['email'] = $email;
     $data['domain'] =  substr(strrchr($email, "@"), 1);
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) $data['domain_data']['valid_format'] = true;
-    else {
-        $data['domain_data']['valid_format'] = false;
-        $data['domain_data']['result'] = 'invalid format';
-    }
+    else $data['domain_data']['valid_format'] = false;
     if ($data['domain_data']['valid_format']) {
-        if (DisposableEmail::isDisposable($email)) {
-            $data['domain_data']['disposable_email'] = true;
-        }
+        if (DisposableEmail::isDisposable($email)) $data['domain_data']['disposable_email'] = true;
         $data['domain_data']['disposable_email'] = false;
     }
     
