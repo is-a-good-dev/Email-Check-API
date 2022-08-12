@@ -27,6 +27,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     }
     $data = [];
     $data['email'] = $email;
+    $data['domain'] =  substr(strrchr($email, "@"), 1);
     if (filter_var($email, FILTER_VALIDATE_EMAIL)) $data['domain_data']['valid_format'] = true;
     else {
         $data['domain_data']['valid_format'] = false;
