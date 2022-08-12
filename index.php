@@ -23,6 +23,13 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
         response(400, 'Email cannot be empty');
         exit();
     }
-    //$email_checks['mx-records'] = getmxrr($email);
-//    response(200,"ok");
+    $data = [];
+    $data['email'] = $email;
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) $data['valid_format'] = true;
+    else {
+        $data['valid_format'] = false;
+        $data['result'] = 'invalid format';
+    }
+    
+    response(200, 'OK', $data);
 }

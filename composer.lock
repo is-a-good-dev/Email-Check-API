@@ -1,0 +1,68 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "ad4cee4e50081dc3e5a581dd45afb021",
+    "packages": [
+        {
+            "name": "elliotjreed/disposable-emails-filter",
+            "version": "3.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/elliotjreed/disposable-emails-filter-php.git",
+                "reference": "1db80ed4d72816525403ad49f994784392f8cd21"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/elliotjreed/disposable-emails-filter-php/zipball/1db80ed4d72816525403ad49f994784392f8cd21",
+                "reference": "1db80ed4d72816525403ad49f994784392f8cd21",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4|^8.0|^8.1"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^3.8",
+                "phpunit/phpunit": "^9.5",
+                "roave/security-advisories": "dev-master",
+                "squizlabs/php_codesniffer": "^3.6",
+                "vimeo/psalm": "^4.22"
+            },
+            "type": "package",
+            "autoload": {
+                "psr-4": {
+                    "ElliotJReed\\DisposableEmail\\": "src/ElliotJReed/DisposableEmail/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Elliot J. Reed",
+                    "email": "disposable-emails-development@elliotjreed.com",
+                    "homepage": "https://www.elliotjreed.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A PHP package for determining whether an email address is from a disposable / temporary email address provider.",
+            "support": {
+                "issues": "https://github.com/elliotjreed/disposable-emails-filter-php/issues",
+                "source": "https://github.com/elliotjreed/disposable-emails-filter-php/tree/3.3.0"
+            },
+            "time": "2022-04-17T09:34:47+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": [],
+    "plugin-api-version": "2.2.0"
+}
