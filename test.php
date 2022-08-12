@@ -18,11 +18,12 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     }
     if ($_GET['action'] == 'testres'){
         $data = [];
+        $data['email'] = 'johndoe@example.com';
         $data['valid_domain'] = true;
         $data['result'] = 'deliverable';
         $data['domain_data']['valid_format'] = true;
         $data['domain_data']['mx_records'] = true;
         $data['domain_data']['disposable'] = false;
-        response("ok", 200, $data);
+        response("Example response", 200, $data);
     }
 }
