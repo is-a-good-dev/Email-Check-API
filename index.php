@@ -33,10 +33,13 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
         $data['domain_data']['valid_format'] = false;
         $data['domain_data']['result'] = 'invalid format';
     }
-    if (DisposableEmail::isDisposable($email)) {
-        $data['domain_data']['disposable_email'] = true;
-    } 
-    $data['domain_data']['disposable_email'] = false;
+    if ($data['domain_data']['valid_format']) {
+        if (DisposableEmail::isDisposable($email)) {
+            $data['domain_data']['disposable_email'] = true;
+        }
+        $data['domain_data']['disposable_email'] = false;
+    }
+    
 
     
     response(200, 'OK', $data);
