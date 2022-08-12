@@ -10,6 +10,14 @@ function response($status,$message,&$data=null){
 error_reporting(0); 
 if ($_SERVER['REQUEST_METHOD']=='GET'){
     $key = $_GET['key'];
-    if (empty(trim($key))) response(400, 'API key cannot be empty');
-
+    if (empty(trim($key))) {
+        response(400, 'API key cannot be empty');
+        exit();
+    }
+    if ($key != 'keygoeshere') {
+        response(400, 'Incorrect credentials');
+        exit();
+    }
+    //$email = $_GET['email'];
+    response(200,"ok");
 }
