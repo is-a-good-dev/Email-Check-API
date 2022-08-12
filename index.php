@@ -1,7 +1,7 @@
 <?php 
 require 'vendor/autoload.php';
 use ElliotJReed\DisposableEmail\DisposableEmail;
-header('Content-type: application/json');
+//header('Content-type: application/json');
 function response($status,$message,&$data=null){
     header("HTTP/1.1 ".$status);
     $response['status'] = $status;
