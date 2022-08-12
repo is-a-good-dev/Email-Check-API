@@ -2,7 +2,9 @@
 
 API created to check emails for mx-records, format, deliverability and to make sure its valid. 
 
-[email-check.is-a-good.dev/?key=sfhksdkgdfhsikgsdf&email=email@goes.here]()
+http://email-check.ext.talosbot.xyz/?key=keygoeshere&email=will@is-a-good.dev
+
+[test endpoint](http://email-check.ext.talosbot.xyz/test.php?action=testres)
 
 Endpoints:
 
