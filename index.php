@@ -47,6 +47,19 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
     }
     //var_dump($data['domain_data']['mx_records']);
 
-    
+    $data['valid'] = true;
+    $data['reason'] = array();
+    if ($arr_len < 1) {
+        $data['valid'] = false;
+        array_push($data['reason'],'No MX records found');
+    }
+    if (!$data['domain_data']['valid_format']) {
+        $data['valid'] = false;
+        array_push($data['reason'], 'Invalid email format');
+    }
+    if ($data['domain_data']['disposable_email']) {
+        $data['valid'] = false;
+        array_push($data['reason'], 'Disposable email address');
+    }
     response(200, 'OK', $data);
 }
