@@ -21,9 +21,11 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
         $data['email'] = 'johndoe@example.com';
         $data['domain'] = 'example.com';
         $data['domain_data']['valid_format'] = true;
-        $data['domain_data']['mx_records'] = true;
+        $data['domain_data']['mx_record_count'] = 2;
         $data['domain_data']['disposable'] = false;
+        $data['domain_data']['mx_records'] = array('mx-1','mx-2');
         $data['valid'] = true;
+        $data['reason'] = [];
         response("Example response", 200, $data);
     }
 }
