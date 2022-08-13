@@ -16,7 +16,7 @@ if ($_SERVER['REQUEST_METHOD']=='GET'){
         response(400, 'API key cannot be empty');
         exit();
     }
-    if ($key != 'keygoeshere') {
+    if ($key != '6lPyUV2dX8') {
         response(400, 'Incorrect credentials');
         exit();
     }
