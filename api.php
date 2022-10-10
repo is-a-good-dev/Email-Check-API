@@ -16,7 +16,9 @@ class data {
     public mixed $return_data;
 
     public function __construct (mixed $return_data = null) {
+
         $this->return = $return_data;
+
     }
     public function mx (string $validate) {
 
@@ -32,6 +34,8 @@ class data {
         $this->return = $mx_records;
     }
     public function __destruct() {
+
         if (isset($this->return)) return $this->return;
+        
     }
 }
