@@ -1,5 +1,5 @@
 <?php
-class api {
+class api2 {
     public function __construct () {
         header ('Content-type: application/json');
     }
@@ -66,4 +66,7 @@ class validate extends api {
         if (isset($this->return)) return $this->return;
 
     }
+}
+class api {
+    
 }
