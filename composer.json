@@ -1,5 +1,6 @@
 {
     "require": {
-        "elliotjreed/disposable-emails-filter": "^3.3"
+        "elliotjreed/disposable-emails-filter": "^3.3",
+        "bramus/router": "~1.6"
     }
 }
