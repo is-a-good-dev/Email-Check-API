@@ -68,5 +68,8 @@ class validate extends api {
     }
 }
 class api {
-    
+    public function __construct () {}
+    public function __destruct () {}
+    public function data () {}
+    public function response () {}
 }
